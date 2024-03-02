@@ -52,7 +52,6 @@ public class AdminAccountService {
         }
         user.setPassword(encoder.encode(accountDto.getPassword()));
         user.setRoles(roleList);
-        user.setBalance(accountDto.getBalance());
        return ResponseEntity.ok(userRepository.save(user));
     }
 
@@ -75,7 +74,6 @@ public class AdminAccountService {
                 }
             }
             user.setRoles(roleList);
-            user.setBalance(accountDto.getBalance());
             return ResponseEntity.ok(userRepository.save(user));
         }
         return ResponseEntity.badRequest().build();

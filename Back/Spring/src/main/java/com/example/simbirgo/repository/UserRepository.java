@@ -1,7 +1,6 @@
 package com.example.simbirgo.repository;
 
 
-import com.example.simbirgo.entity.Transport;
 import com.example.simbirgo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

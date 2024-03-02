@@ -11,7 +11,9 @@ import com.example.simbirgo.payload.response.MessageResponse;
 import com.example.simbirgo.repository.RoleRepository;
 import com.example.simbirgo.repository.UserRepository;
 import com.example.simbirgo.security.jwt.JwtUtils;
+import com.example.simbirgo.security.token.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -51,6 +53,9 @@ public class AccountService {
     @Autowired
     JwtUtils jwtUtils;
 
+    @Autowired
+    TokenService tokenService;
+
 
 
 
@@ -86,7 +91,6 @@ public class AccountService {
         Set<Role> roles=new HashSet<>();
         roles.add(roleRepository.findByName(ERole.ROLE_MANAGER).get());
         user.setRoles(roles);
-        user.setBalance(0.0);
         userRepository.save(user);
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
@@ -94,9 +98,13 @@ public class AccountService {
     public ResponseEntity<?> signOut(HttpServletRequest request, HttpServletResponse response){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
+            String token = request.getHeader("Authorization").replace("Bearer ", "");
+            tokenService.revokeToken(token);
             new SecurityContextLogoutHandler().logout(request, response, auth);
+            return ResponseEntity.ok(new MessageResponse("User signed out successfully!"));
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new MessageResponse("User not authenticated"));
         }
-        return ResponseEntity.ok(new MessageResponse("User signed out successfully!"));
     }
 
     public ResponseEntity<?> update(UpdateRequest updateRequest){

@@ -12,14 +12,12 @@ public class UserDto {
     private String username;
     private String password;
     private Boolean isAdmin;
-    private Double balance;
 
 
     public static UserDto toDto(User user){
         UserDto userDto=new UserDto();
         userDto.setUsername(user.getUsername());
         userDto.setPassword(user.getPassword());
-        userDto.setBalance(user.getBalance());
        if(user.getRoles().stream().filter(role -> role.getName()==ERole.ROLE_ADMIN).findFirst().orElse(null)!=null){
            userDto.setIsAdmin(true);
        }else{

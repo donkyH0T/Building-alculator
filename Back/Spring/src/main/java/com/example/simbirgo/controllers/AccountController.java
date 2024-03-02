@@ -1,54 +1,81 @@
 package com.example.simbirgo.controllers;
 
 
+import com.example.simbirgo.exception.TokenRevokedException;
 import com.example.simbirgo.payload.request.LoginRequest;
 import com.example.simbirgo.payload.request.SignupRequest;
 import com.example.simbirgo.payload.request.UpdateRequest;
 import com.example.simbirgo.security.services.AccountService;
+import com.example.simbirgo.security.token.TokenService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/Account")
 public class AccountController {
 
-   @Autowired
+    @Autowired
     AccountService accountService;
 
-
+    @Autowired
+    TokenService tokenService;
 
     @GetMapping("/Me")
     @SecurityRequirement(name = "JWT")
-    @PreAuthorize("hasRole('MANAGER') hasRole('ADMIN')")
-    public ResponseEntity<?> me(){
+    @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN')")
+    public ResponseEntity<?> me(@RequestHeader("Authorization") String authorizationHeader) {
+        String token = extractTokenFromHeader(authorizationHeader);
+        if (tokenService.isTokenRevoked(token)) {
+            throw new TokenRevokedException("Token has been revoked");
+        }
         return accountService.me();
     }
 
     @PostMapping("/SignIn")
-    public ResponseEntity<?> signIn(@RequestBody LoginRequest loginRequest){
+    public ResponseEntity<?> signIn(@RequestBody LoginRequest loginRequest) {
         return accountService.signIn(loginRequest);
     }
 
     @PostMapping("/SignUp")
-    public ResponseEntity<?> signUp(@RequestBody SignupRequest signUpRequest){
+    public ResponseEntity<?> signUp(@RequestBody SignupRequest signUpRequest) {
         return accountService.signUp(signUpRequest);
     }
 
-//    @PostMapping("/SignOut")
-//    @SecurityRequirement(name = "JWT")
-//    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
-//    public ResponseEntity<?> signOut(HttpServletRequest request, HttpServletResponse response){
-//        return accountService.signOut(request,response);
-//    }
+    @PostMapping("/SignOut")
+    @SecurityRequirement(name = "JWT")
+    @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+    public ResponseEntity<?> signOut(HttpServletRequest request, HttpServletResponse response, @RequestHeader("Authorization") String authorizationHeader) {
+        String token = extractTokenFromHeader(authorizationHeader);
+        if (tokenService.isTokenRevoked(token)) {
+            throw new TokenRevokedException("Token has been revoked");
+        }
+        return accountService.signOut(request, response);
+    }
 
     @PutMapping("/Update")
     @SecurityRequirement(name = "JWT")
-    @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN')")
-    public ResponseEntity<?> update(@RequestBody UpdateRequest updateRequest){
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<?> update(@RequestBody UpdateRequest updateRequest, @RequestHeader("Authorization") String authorizationHeader) {
+        String token = extractTokenFromHeader(authorizationHeader);
+        if (tokenService.isTokenRevoked(token)) {
+            throw new TokenRevokedException("Token has been revoked");
+        }
         return accountService.update(updateRequest);
+    }
+
+    private String extractTokenFromHeader(String authorizationHeader) {
+        String[] parts = authorizationHeader.split(" ");
+        if (parts.length == 2) {
+            return parts[1];
+        } else {
+            throw new IllegalArgumentException("Invalid Authorization header format");
+        }
     }
 }
