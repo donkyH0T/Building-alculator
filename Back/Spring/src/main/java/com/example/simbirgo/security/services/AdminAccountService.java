@@ -3,7 +3,7 @@ package com.example.simbirgo.security.services;
 import com.example.simbirgo.entity.ERole;
 import com.example.simbirgo.entity.Role;
 import com.example.simbirgo.entity.User;
-import com.example.simbirgo.payload.request.UserDto;
+import com.example.simbirgo.dto.request.UserDto;
 import com.example.simbirgo.repository.RoleRepository;
 import com.example.simbirgo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +24,9 @@ public class AdminAccountService {
     UserRepository userRepository;
     @Autowired
     RoleRepository roleRepository;
+
+    @Autowired
+    private MailSenderService mailSenderService;
 
     @Autowired
     PasswordEncoder encoder;
@@ -52,6 +55,8 @@ public class AdminAccountService {
         }
         user.setPassword(encoder.encode(accountDto.getPassword()));
         user.setRoles(roleList);
+        String message = String.format("Dear manager %s, congratulations on your successful registration",accountDto.getUsername());
+        mailSenderService.send(accountDto.getEmail(), "Successful registration", message);
        return ResponseEntity.ok(userRepository.save(user));
     }
 

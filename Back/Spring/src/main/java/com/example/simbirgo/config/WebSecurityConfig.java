@@ -1,4 +1,4 @@
-package com.example.simbirgo.security;
+package com.example.simbirgo.config;
 
 import com.example.simbirgo.security.jwt.AuthEntryPointJwt;
 import com.example.simbirgo.security.jwt.AuthTokenFilter;

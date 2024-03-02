@@ -1,6 +1,5 @@
-package com.example.simbirgo.payload.request;
+package com.example.simbirgo.dto.request;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data

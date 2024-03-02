@@ -1,4 +1,4 @@
-package com.example.simbirgo.payload.response;
+package com.example.simbirgo.dto.response;
 
 
 import lombok.AllArgsConstructor;

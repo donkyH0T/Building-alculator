@@ -2,12 +2,14 @@ package com.example.simbirgo.controllers;
 
 
 import com.example.simbirgo.entity.User;
-import com.example.simbirgo.payload.request.UserDto;
+import com.example.simbirgo.dto.request.UserDto;
 import com.example.simbirgo.security.services.AdminAccountService;
+import com.example.simbirgo.security.services.MailSenderService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,7 +40,10 @@ public class AdminAccountController {
     @PreAuthorize("hasRole('ADMIN')")
     @SecurityRequirement(name = "JWT")
     public ResponseEntity<?> createAccount(@RequestBody UserDto accountDto) {
-        return adminAccountService.createAccount(accountDto);
+        if (!StringUtils.isEmpty(accountDto.getEmail())) {
+            return adminAccountService.createAccount(accountDto);
+        }
+        return ResponseEntity.badRequest().body("Error registation");
     }
 
     @PutMapping("/{id}")

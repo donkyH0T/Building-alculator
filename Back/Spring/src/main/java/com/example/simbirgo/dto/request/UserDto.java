@@ -1,15 +1,13 @@
-package com.example.simbirgo.payload.request;
+package com.example.simbirgo.dto.request;
 
 import com.example.simbirgo.entity.ERole;
-import com.example.simbirgo.entity.Role;
 import com.example.simbirgo.entity.User;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 public class UserDto {
     private String username;
+    private String email;
     private String password;
     private Boolean isAdmin;
 
@@ -17,6 +15,7 @@ public class UserDto {
     public static UserDto toDto(User user){
         UserDto userDto=new UserDto();
         userDto.setUsername(user.getUsername());
+        userDto.setEmail(user.getEmail());
         userDto.setPassword(user.getPassword());
        if(user.getRoles().stream().filter(role -> role.getName()==ERole.ROLE_ADMIN).findFirst().orElse(null)!=null){
            userDto.setIsAdmin(true);

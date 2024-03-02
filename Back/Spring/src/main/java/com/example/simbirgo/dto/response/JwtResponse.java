@@ -1,7 +1,6 @@
-package com.example.simbirgo.payload.response;
+package com.example.simbirgo.dto.response;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -10,12 +9,12 @@ public class JwtResponse {
 	private String token;
 	private String type = "Bearer";
 	private Long id;
-	private String username;
+	private String email;
 
-	public JwtResponse(String token, Long id, String username, List<String> roles) {
+	public JwtResponse(String token, Long id, String email, List<String> roles) {
 		this.token = token;
 		this.id = id;
-		this.username = username;
+		this.email = email;
 		this.roles = roles;
 	}
 	private List<String> roles;

@@ -2,9 +2,9 @@ package com.example.simbirgo.controllers;
 
 
 import com.example.simbirgo.exception.TokenRevokedException;
-import com.example.simbirgo.payload.request.LoginRequest;
-import com.example.simbirgo.payload.request.SignupRequest;
-import com.example.simbirgo.payload.request.UpdateRequest;
+import com.example.simbirgo.dto.request.LoginRequest;
+import com.example.simbirgo.dto.request.SignupRequest;
+import com.example.simbirgo.dto.request.UpdateRequest;
 import com.example.simbirgo.security.services.AccountService;
 import com.example.simbirgo.security.token.TokenService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -50,7 +50,7 @@ public class AccountController {
 
     @PostMapping("/SignOut")
     @SecurityRequirement(name = "JWT")
-    @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
+    @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN')")
     public ResponseEntity<?> signOut(HttpServletRequest request, HttpServletResponse response, @RequestHeader("Authorization") String authorizationHeader) {
         String token = extractTokenFromHeader(authorizationHeader);
         if (tokenService.isTokenRevoked(token)) {
