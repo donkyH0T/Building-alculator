@@ -1,8 +1,6 @@
 package com.example.simbirgo.security.services;
 
-import com.example.simbirgo.entity.ERole;
-import com.example.simbirgo.entity.Role;
-import com.example.simbirgo.entity.User;
+import com.example.simbirgo.entity.*;
 import com.example.simbirgo.dto.request.LoginRequest;
 import com.example.simbirgo.dto.request.SignupRequest;
 import com.example.simbirgo.dto.request.UpdateRequest;
@@ -10,6 +8,7 @@ import com.example.simbirgo.dto.response.JwtResponse;
 import com.example.simbirgo.dto.response.MessageResponse;
 import com.example.simbirgo.repository.RoleRepository;
 import com.example.simbirgo.repository.UserRepository;
+import com.example.simbirgo.repository.User_statusRepository;
 import com.example.simbirgo.security.jwt.JwtUtils;
 import com.example.simbirgo.security.token.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +48,9 @@ public class AccountService {
     JwtUtils jwtUtils;
 
     @Autowired
+    User_statusRepository userStatusRepository;
+
+    @Autowired
     TokenService tokenService;
 
 
@@ -57,14 +59,14 @@ public class AccountService {
     public ResponseEntity<?> me(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentUserName = authentication.getName();
-        User user=userRepository.findByEmail(currentUserName).get();
+        User user=userRepository.findByLogin(currentUserName).get();
         return ResponseEntity.ok(user);
     }
 
 
     public ResponseEntity<?> signIn(LoginRequest loginRequest){
         Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
+                new UsernamePasswordAuthenticationToken(loginRequest.getLogin(), loginRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
@@ -81,11 +83,15 @@ public class AccountService {
                     .badRequest()
                     .body(new MessageResponse("Error: email is already taken!"));
         }
-        User user = new User(signUpRequest.getUsername(),signUpRequest.getEmail(), encoder.encode(signUpRequest.getPassword()));
+        User user = signUpRequest.toUser();
+        user.setPassword(encoder.encode(signUpRequest.getPassword()));
         Set<Role> roles=new HashSet<>();
         roles.add(roleRepository.findByName(ERole.ROLE_MANAGER).get());
         user.setRoles(roles);
-        userRepository.save(user);
+        User_status userStatus = userStatusRepository.findByName(EState.Listed_In_The_State).get();
+        user.setState_id(userStatus);
+        user.setCustomer_id(null);
+        userRepository.saveAndFlush(user);
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
 
@@ -104,11 +110,10 @@ public class AccountService {
     public ResponseEntity<?> update(UpdateRequest updateRequest){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentUserName = authentication.getName();
-        User user = userRepository.findByUsername(currentUserName).get();
-        if(userRepository.existsByUsername(updateRequest.getUsername())){
+        User user = userRepository.findByLogin(currentUserName).get();
+        if(userRepository.existsByLogin(updateRequest.getLogin())){
             return ResponseEntity.badRequest().build();
         }
-        user.setUsername(updateRequest.getUsername());
         user.setPassword(encoder.encode(updateRequest.getPassword()));
         userRepository.save(user);
         return ResponseEntity.ok(new MessageResponse("User updated successfully!"));

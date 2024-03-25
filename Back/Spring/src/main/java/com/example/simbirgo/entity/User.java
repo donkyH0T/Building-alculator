@@ -18,20 +18,28 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = false)
 	private Long id;
-
-	@Column(name = "username",nullable = false)
-
-	private String username;
+	@Column(name = "email",nullable = false)
 	private String email;
-
-	public User(String username, String email, String password) {
-		this.username = username;
-		this.email = email;
-		this.password = password;
-	}
-
+	@Column(name = "last_name",nullable = false)
+	private String last_name;
+	@Column(name = "first_name",nullable = false)
+	private String first_name;
+	@Column(name = "second_name",nullable = false)
+	private String second_name;
+	@Column(name = "phone",nullable = false)
+	private Integer phone;
+	@Column(name = "login",nullable = false)
+	private String login;
 	@Column(name = "password")
 	private String password;
+
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "state_id")
+	private User_status state_id = new User_status();
+
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "customer_id")
+	private Customers customer_id = new Customers();
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles", 

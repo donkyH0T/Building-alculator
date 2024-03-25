@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class UserDto {
-    private String username;
+    private String login;
     private String email;
     private String password;
     private Boolean isAdmin;
@@ -14,7 +14,7 @@ public class UserDto {
 
     public static UserDto toDto(User user){
         UserDto userDto=new UserDto();
-        userDto.setUsername(user.getUsername());
+        userDto.setLogin(user.getLogin());
         userDto.setEmail(user.getEmail());
         userDto.setPassword(user.getPassword());
        if(user.getRoles().stream().filter(role -> role.getName()==ERole.ROLE_ADMIN).findFirst().orElse(null)!=null){

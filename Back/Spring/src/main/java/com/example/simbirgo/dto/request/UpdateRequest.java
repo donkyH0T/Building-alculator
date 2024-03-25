@@ -4,13 +4,13 @@ import lombok.Data;
 
 @Data
 public class UpdateRequest {
-    private String username;
+    private String login;
 
     public UpdateRequest() {
     }
 
-    public UpdateRequest(String username, String password) {
-        this.username = username;
+    public UpdateRequest(String login, String password) {
+        this.login = login;
         this.password = password;
     }
 

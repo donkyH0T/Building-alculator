@@ -43,11 +43,11 @@ public class AdminAccountService {
     }
 
     public ResponseEntity<?> createAccount(UserDto accountDto) {
-        if(userRepository.existsByUsername(accountDto.getUsername())){
+        if(userRepository.existsByLogin(accountDto.getLogin())){
             return ResponseEntity.badRequest().body("Account exists");
         }
         User user=new User();
-        user.setUsername(accountDto.getUsername());
+        user.setLogin(accountDto.getLogin());
         Set<Role> roleList=new HashSet<>();
         roleList.add(roleRepository.findByName(ERole.ROLE_MANAGER).get());
         if(accountDto.getIsAdmin()){
@@ -55,18 +55,18 @@ public class AdminAccountService {
         }
         user.setPassword(encoder.encode(accountDto.getPassword()));
         user.setRoles(roleList);
-        String message = String.format("Dear manager %s, congratulations on your successful registration",accountDto.getUsername());
+        String message = String.format("Dear manager %s, congratulations on your successful registration",accountDto.getLogin());
         mailSenderService.send(accountDto.getEmail(), "Successful registration", message);
        return ResponseEntity.ok(userRepository.save(user));
     }
 
     public ResponseEntity<?> updateAccount(Long id, UserDto accountDto) {
-        if(userRepository.existsByUsername(accountDto.getUsername())){
+        if(userRepository.existsByLogin(accountDto.getLogin())){
             return ResponseEntity.badRequest().body("Account exists");
         }
         if(userRepository.existsById(id)){
            User user=userRepository.findById(id).get();
-            user.setUsername(accountDto.getUsername());
+            user.setLogin(accountDto.getLogin());
             user.setPassword(encoder.encode(accountDto.getPassword()));
             Set<Role> roleList=user.getRoles();
             if(accountDto.getIsAdmin()){

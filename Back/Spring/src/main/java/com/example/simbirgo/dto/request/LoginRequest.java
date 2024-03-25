@@ -3,6 +3,6 @@ package com.example.simbirgo.dto.request;
 import lombok.Data;
 @Data
 public class LoginRequest {
-	private String email;
+	private String login;
 	private String password;
 }
