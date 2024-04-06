@@ -1,6 +1,6 @@
 package com.example.simbirgo.security.jwt;
 
-import com.example.simbirgo.security.services.UserDetailsImpl;
+import com.example.simbirgo.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

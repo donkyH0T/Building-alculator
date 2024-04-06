@@ -1,4 +1,4 @@
-package com.example.simbirgo.security.services;
+package com.example.simbirgo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

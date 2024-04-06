@@ -24,12 +24,11 @@ public class Material_characteristics {
     @Column(name = "volume")
     private Float volume;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "measurement_unit_id")
-    private List<Measurement_units> measurement_unit_id = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "measurement_unit_id", referencedColumnName = "id")
+    private Measurement_units measurementUnit;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "materials_id")
-    private List<Material_characteristics> materials_id = new ArrayList<>();
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "mаterials_id")
+    private Materials mаterials_id = new Materials();
 }

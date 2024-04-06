@@ -3,7 +3,7 @@ package com.example.simbirgo.security.jwt;
 import java.io.IOException;
 
 
-import com.example.simbirgo.security.services.UserDetailsServiceImpl;
+import com.example.simbirgo.services.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

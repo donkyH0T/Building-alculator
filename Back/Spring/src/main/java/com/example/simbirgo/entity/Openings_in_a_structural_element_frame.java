@@ -21,6 +21,5 @@ public class Openings_in_a_structural_element_frame {
     private Structural_element_frame structural_element_frame_id = new Structural_element_frame();
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "openings_id")
     private List<Openings> openings_id = new ArrayList<>();
 }

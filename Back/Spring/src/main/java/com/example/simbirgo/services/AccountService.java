@@ -1,4 +1,4 @@
-package com.example.simbirgo.security.services;
+package com.example.simbirgo.services;
 
 import com.example.simbirgo.entity.*;
 import com.example.simbirgo.dto.request.LoginRequest;
@@ -82,6 +82,11 @@ public class AccountService {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: email is already taken!"));
+        }
+        if (userRepository.existsByLogin(signUpRequest.getLogin())) {
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: login is already taken!"));
         }
         User user = signUpRequest.toUser();
         user.setPassword(encoder.encode(signUpRequest.getPassword()));

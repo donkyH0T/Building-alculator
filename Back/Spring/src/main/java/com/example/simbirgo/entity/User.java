@@ -27,7 +27,7 @@ public class User {
 	@Column(name = "second_name",nullable = false)
 	private String second_name;
 	@Column(name = "phone",nullable = false)
-	private Integer phone;
+	private String phone;
 	@Column(name = "login",nullable = false)
 	private String login;
 	@Column(name = "password")

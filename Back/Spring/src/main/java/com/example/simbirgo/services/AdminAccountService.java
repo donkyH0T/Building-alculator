@@ -1,4 +1,4 @@
-package com.example.simbirgo.security.services;
+package com.example.simbirgo.services;
 
 import com.example.simbirgo.entity.ERole;
 import com.example.simbirgo.entity.Role;

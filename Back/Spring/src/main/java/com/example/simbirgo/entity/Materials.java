@@ -3,6 +3,8 @@ package com.example.simbirgo.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,7 +20,4 @@ public class Materials {
     @Column(name = "structural_element_type")
     private String structural_element_type;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "mаterial_caracteristics_id")
-    private Material_characteristics mаterial_caracteristics_id = new Material_characteristics();
 }

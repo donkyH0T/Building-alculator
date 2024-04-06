@@ -1,4 +1,4 @@
-package com.example.simbirgo.security.services;
+package com.example.simbirgo.services;
 
 import java.util.Collection;
 import java.util.List;

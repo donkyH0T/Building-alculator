@@ -3,8 +3,7 @@ package com.example.simbirgo.controllers;
 
 import com.example.simbirgo.entity.User;
 import com.example.simbirgo.dto.request.UserDto;
-import com.example.simbirgo.security.services.AdminAccountService;
-import com.example.simbirgo.security.services.MailSenderService;
+import com.example.simbirgo.services.AdminAccountService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

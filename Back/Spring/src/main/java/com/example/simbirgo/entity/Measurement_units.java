@@ -11,6 +11,6 @@ public class Measurement_units {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long id;
-    @Column(name = "measurement_units_name",nullable = false)
-    private Character measurement_units_name;
+    @Column(name = "measurement_units_name", nullable = false, length = 20)
+    private String measurement_units_name;
 }

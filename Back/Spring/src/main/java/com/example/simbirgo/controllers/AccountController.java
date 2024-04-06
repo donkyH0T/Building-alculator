@@ -5,7 +5,7 @@ import com.example.simbirgo.exception.TokenRevokedException;
 import com.example.simbirgo.dto.request.LoginRequest;
 import com.example.simbirgo.dto.request.SignupRequest;
 import com.example.simbirgo.dto.request.UpdateRequest;
-import com.example.simbirgo.security.services.AccountService;
+import com.example.simbirgo.services.AccountService;
 import com.example.simbirgo.security.token.TokenService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
