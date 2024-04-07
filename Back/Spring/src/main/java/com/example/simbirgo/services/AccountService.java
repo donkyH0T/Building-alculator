@@ -95,7 +95,7 @@ public class AccountService {
         user.setRoles(roles);
         User_status userStatus = userStatusRepository.findByName(EState.Listed_In_The_State).get();
         user.setState_id(userStatus);
-        user.setCustomer_id(null);
+        user.setCustomers_id(null);
         userRepository.saveAndFlush(user);
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }

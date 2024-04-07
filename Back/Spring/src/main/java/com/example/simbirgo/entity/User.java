@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -37,9 +38,8 @@ public class User {
 	@JoinColumn(name = "state_id")
 	private User_status state_id = new User_status();
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "customer_id")
-	private Customers customer_id = new Customers();
+	@OneToMany(fetch = FetchType.LAZY)
+	private List<Customers> customers_id = new ArrayList<>();
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles", 

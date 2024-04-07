@@ -15,8 +15,10 @@ create table structural_element_basement (id int8 not null, concrete varchar(255
 create table structural_element_frame (id int8 not null, osb_external_wall varchar(255) not null, osb_internal_wal varchar(255) not null, osb_thickness varchar(255) not null, amount_floor int4 not null, base_area float4 not null, external_wall_thickness float4 not null, floor_number int4 not null, insulation_external_wall varchar(255) not null, insulation_thickness varchar(255) not null, internal_wall_length float4 not null, internal_wall_thickness float4 not null, overlap_thickness varchar(255) not null, perimeter_of_external_walls float4 not null, steam_waterproofing_external_wall varchar(255) not null, steam_waterproofing_thickness varchar(255) not null, windscreen_external_wall varchar(255) not null, windscreen_thickness varchar(255) not null, results_id int8, primary key (id));
 create table user_roles (user_id int8 not null, role_id int4 not null, primary key (user_id, role_id));
 create table user_status (id int8 not null, name varchar(20), primary key (id));
-create table users (id int8 not null, email varchar(255) not null, first_name varchar(255) not null, last_name varchar(255) not null, login varchar(255) not null, password varchar(255), phone varchar(255) not null, second_name varchar(255) not null, customer_id int8, state_id int8, primary key (id));
+create table users (id int8 not null, email varchar(255) not null, first_name varchar(255) not null, last_name varchar(255) not null, login varchar(255) not null, password varchar(255), phone varchar(255) not null, second_name varchar(255) not null, state_id int8, primary key (id));
+create table users_customers_id (user_id int8 not null, customers_id_id int8 not null);
 alter table openings_in_a_structural_element_frame_openings_id add constraint UK_gaiwdlq18djc02837jvv0crga unique (openings_id_id);
+alter table users_customers_id add constraint UK_ekw68ydhuwe7b15dg30tl2gmd unique (customers_id_id);
 alter table calculation add constraint FK4n7sgnxv9uwyun72xey3p0gf2 foreign key (customer_id) references customers;
 alter table calculation add constraint FKegg8gfg8iexwgs0ajlo8dl9f foreign key (results_id) references results;
 alter table calculation add constraint FKd5sau9vgxapu1lr0pgkbextfk foreign key (сalculation_state_id) references status;
@@ -31,5 +33,6 @@ alter table structural_element_basement add constraint FKahteuynd44s517a4i4mx59w
 alter table structural_element_frame add constraint FKkmgqh3xt4h3mkrnluj02f6r0n foreign key (results_id) references results;
 alter table user_roles add constraint FKh8ciramu9cc9q3qcqiv4ue8a6 foreign key (role_id) references roles;
 alter table user_roles add constraint FKhfh9dx7w3ubf1co1vdev94g3f foreign key (user_id) references users;
-alter table users add constraint FKchxdoybbydcaj5smgxe0qq5mk foreign key (customer_id) references customers;
 alter table users add constraint FKaxe06byqbe517vwwoa2a8pv3f foreign key (state_id) references user_status;
+alter table users_customers_id add constraint FKb4m94hafs5li4er9eun6bdsg2 foreign key (customers_id_id) references customers;
+alter table users_customers_id add constraint FKcnol82jeu2dvaxj4pg5ksubmk foreign key (user_id) references users;
