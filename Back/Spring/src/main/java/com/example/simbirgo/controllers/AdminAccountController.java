@@ -42,7 +42,7 @@ public class AdminAccountController {
         if (!StringUtils.isEmpty(accountDto.getEmail())) {
             return adminAccountService.createAccount(accountDto);
         }
-        return ResponseEntity.badRequest().body("Error registation");
+        return ResponseEntity.badRequest().body("Error registration");
     }
 
     @PutMapping("/{id}")

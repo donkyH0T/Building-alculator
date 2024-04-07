@@ -26,9 +26,6 @@ public class AdminAccountService {
     RoleRepository roleRepository;
 
     @Autowired
-    private MailSenderService mailSenderService;
-
-    @Autowired
     PasswordEncoder encoder;
     public List<UserDto> getAllAccounts(int start, int count) {
         List<User> userList=userRepository.findAllUsers(start,count);
@@ -55,8 +52,6 @@ public class AdminAccountService {
         }
         user.setPassword(encoder.encode(accountDto.getPassword()));
         user.setRoles(roleList);
-        String message = String.format("Dear manager %s, congratulations on your successful registration",accountDto.getLogin());
-        mailSenderService.send(accountDto.getEmail(), "Successful registration", message);
        return ResponseEntity.ok(userRepository.save(user));
     }
 

@@ -19,8 +19,13 @@ public class CustomersService {
     @Autowired
     CustomersRepository customersRepository;
 
+    @Autowired
+    private MailSenderService mailSenderService;
+
     public ResponseEntity<?> addCustomers(CustomersRequest customersRequest) {
         Customers customers = customersRequest.toCustomers();
+        String message = String.format("Dear customers %s, congratulations on your successful registration", customers.getFirst_name());
+        mailSenderService.send(customers.getEmail(), "Successful registration", message);
         return ResponseEntity.ok(customersRepository.saveAndFlush(customers));
     }
 }
