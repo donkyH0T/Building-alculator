@@ -7,7 +7,7 @@ create table measurement_units (id int8 not null, measurement_units_name varchar
 create table openings (id int8 not null, height float4, type varchar(255), width float4, primary key (id));
 create table openings_in_a_structural_element_frame (id int8 not null, amount int4, structural_element_frame_id int8, primary key (id));
 create table openings_in_a_structural_element_frame_openings_id (openings_in_a_structural_element_frame_id int8 not null, openings_id_id int8 not null);
-create table price_lists (id int8 not null, date timestamp not null, purchase_price float4 not null, selling_price float4 not null, material_characteristics_id int8, primary key (id));
+create table price_lists (id int8 not null, date timestamp, purchase_price float4, selling_price float4, material_characteristics_id int8, primary key (id));
 create table results (id int8 not null, amount int4, full_price float4, material varchar(255) not null, measurement_unit varchar(255), price float4, material_characteristics_id int8, primary key (id));
 create table roles (id  serial not null, name varchar(20), primary key (id));
 create table status (id int8 not null, name varchar(20), primary key (id));
