@@ -1,9 +1,10 @@
 package com.example.simbirgo.controllers;
 
+import com.example.simbirgo.dto.request.CalculationDto;
 import com.example.simbirgo.dto.request.CustomersRequest;
-import com.example.simbirgo.dto.request.UserDto;
-import com.example.simbirgo.services.CalculationService;
-import com.example.simbirgo.services.CustomersService;
+import com.example.simbirgo.dto.request.ElementFrameDto;
+import com.example.simbirgo.dto.request.OpeningsStructuralElementFrameDto;
+import com.example.simbirgo.services.*;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,12 @@ public class ManagerController {
     CustomersService customersService;
 
     @Autowired
+    OpeningsInAStructuralElementFrameService openingsInAStructuralElementFrameService;
+
+    @Autowired
     CalculationService calculationService;
+
+
 
     @PostMapping
     @SecurityRequirement(name = "JWT")
@@ -47,5 +53,12 @@ public class ManagerController {
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
     public ResponseEntity<?> customers() {
         return customersService.getAllCustomers();
+    }
+
+    @GetMapping("/calculation")
+    @SecurityRequirement(name = "JWT")
+    @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
+    public ResponseEntity<?> calculation(@RequestBody CalculationDto calculationDto) {
+        return calculationService.calculation(calculationDto);
     }
 }

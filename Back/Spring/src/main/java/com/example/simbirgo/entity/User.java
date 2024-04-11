@@ -39,7 +39,7 @@ public class User {
 	private User_status state_id = new User_status();
 
 	@OneToMany(fetch = FetchType.LAZY)
-	private List<Customers> customers_id = new ArrayList<>();
+	private List<Customers> customers = new ArrayList<>();
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles", 

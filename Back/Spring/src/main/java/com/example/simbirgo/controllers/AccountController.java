@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/Account")
 public class AccountController {
@@ -39,11 +38,13 @@ public class AccountController {
     }
 
     @PostMapping("/SignIn")
+    @CrossOrigin
     public ResponseEntity<?> signIn(@RequestBody LoginRequest loginRequest) {
         return accountService.signIn(loginRequest);
     }
 
     @PostMapping("/SignUp")
+
     public ResponseEntity<?> signUp(@RequestBody SignupRequest signUpRequest) {
         return accountService.signUp(signUpRequest);
     }

@@ -35,12 +35,12 @@ public class CustomersService {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentUserName = authentication.getName();
         User user = userRepository.findByLogin(currentUserName).get();
-        List<Customers> customersList = user.getCustomers_id();
+        List<Customers> customersList = user.getCustomers();
         if (customersList == null || customersList.isEmpty()){
             customersList = new ArrayList<>();
         }
         customersList.add(customers);
-        user.setCustomers_id(customersList);
+        user.setCustomers(customersList);
         Customers saveCustomers = customersRepository.saveAndFlush(customers);
         userRepository.save(user);
 //        String message = String.format("Dear customers %s, congratulations on your successful registration", customers.getFirst_name());
@@ -67,11 +67,11 @@ public class CustomersService {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentUserName = authentication.getName();
         User user = userRepository.findByLogin(currentUserName).get();
-        List<Customers> customersList = user.getCustomers_id();
+        List<Customers> customersList = user.getCustomers();
         if (customersList != null || !customersList.isEmpty()){
             customersList.remove(customers);
         }
-        user.setCustomers_id(customersList);
+        user.setCustomers(customersList);
         userRepository.save(user);
         customersRepository.deleteById(id);
         return ResponseEntity.ok("delete customers with id: "+id);

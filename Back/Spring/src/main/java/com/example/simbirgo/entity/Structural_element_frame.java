@@ -3,7 +3,9 @@ package com.example.simbirgo.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -48,7 +50,6 @@ public class Structural_element_frame {
     @Column(name = "OSB_internal_wal",nullable = false)
     private String OSB_internal_wal;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "results_id")
-    private Results results_id = new Results();
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Results> results = new ArrayList<>();
 }

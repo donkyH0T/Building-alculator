@@ -12,11 +12,11 @@ public class Price_lists {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long id;
-    @Column(name = "date",nullable = false)
+    @Column(name = "date")
     private Date date;
     @Column(name = "purchase_price",nullable = false)
     private Float purchase_price;
-    @Column(name = "selling_price",nullable = false)
+    @Column(name = "selling_price")
     private Float selling_price;
 
     @ManyToOne(fetch = FetchType.LAZY)
