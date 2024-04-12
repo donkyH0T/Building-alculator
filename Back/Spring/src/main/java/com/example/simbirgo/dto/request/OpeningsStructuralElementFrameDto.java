@@ -9,8 +9,6 @@ import java.util.List;
 
 @Data
 public class OpeningsStructuralElementFrameDto {
-    private Long id;
-    private Integer amount;
     private ElementFrameDto elementFrame;
     private List<OpeningsDto> openingsDtos = new ArrayList<>();
 }

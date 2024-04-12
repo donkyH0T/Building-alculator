@@ -9,6 +9,7 @@ import javax.persistence.Column;
 public class ElementFrameDto {
     Integer amountFloor;
     Integer floorNumber;
+    Integer floor_height;
     Float perimeterOfExternalWalls;
     Float baseArea;
     Float externalWallThickness;
@@ -24,13 +25,13 @@ public class ElementFrameDto {
     String windscreenThickness;
     String insulationThickness;
     String osbInternalWal;
-    
     Integer openingsAmount;
 
     public Structural_element_frame toStructural_element_frame(){
         Structural_element_frame frame = new Structural_element_frame();
         frame.setAmount_floor(amountFloor);
         frame.setFloor_number(floorNumber);
+        frame.setFloor_height(floor_height);
         frame.setPerimeter_of_external_walls(perimeterOfExternalWalls);
         frame.setBase_area(baseArea);
         frame.setExternal_wall_thickness(externalWallThickness);

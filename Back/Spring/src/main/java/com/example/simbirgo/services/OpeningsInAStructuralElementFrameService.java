@@ -1,6 +1,7 @@
 package com.example.simbirgo.services;
 
 import com.example.simbirgo.dto.request.ElementFrameDto;
+import com.example.simbirgo.dto.request.OpeningsDto;
 import com.example.simbirgo.dto.request.OpeningsStructuralElementFrameDto;
 import com.example.simbirgo.entity.Openings;
 import com.example.simbirgo.entity.Openings_in_a_structural_element_frame;
@@ -32,16 +33,25 @@ public class OpeningsInAStructuralElementFrameService {
 
     public  Openings_in_a_structural_element_frame openingsInAStructuralElementFrame(OpeningsStructuralElementFrameDto structuralElementFrameDto) {
         List<Openings> openingsList = new ArrayList<>();
-        structuralElementFrameDto.getOpeningsDtos().forEach(openings -> {
+        float Number_of_boards_for_openings = 0.0f;
+        float deducting_the_area_of_openings = 0.0f;
+        List<OpeningsDto> openingsDtos = structuralElementFrameDto.getOpeningsDtos();
+        for (OpeningsDto openings : openingsDtos) {
             Openings openings1 = new Openings();
             openings1.setHeight(openings.getHeight());
             openings1.setWidth(openings.getWidth());
             openings1.setType(openings.getType());
+            if (deducting_the_area_of_openings == 0.0) {
+                deducting_the_area_of_openings = openings.getHeight() + openings.getWidth();
+            } else {
+                deducting_the_area_of_openings -= openings.getHeight() + openings.getWidth();
+            }
+            Number_of_boards_for_openings += (openings.getHeight() + openings.getWidth()) * openings.getAmount();
             openingsRepository.saveAndFlush(openings1);
             openingsList.add(openings1);
-        });
+        }
         Openings_in_a_structural_element_frame openingsInAStructuralElementFrame = new Openings_in_a_structural_element_frame();
-        Structural_element_frame structuralElementFrame = structuralElementFrameService.addElementFrame(structuralElementFrameDto.getElementFrame());
+        Structural_element_frame structuralElementFrame = structuralElementFrameService.addElementFrame(structuralElementFrameDto.getElementFrame(), Number_of_boards_for_openings, deducting_the_area_of_openings);
         openingsInAStructuralElementFrame.setOpenings(openingsList);
         structuralElementFrameRepository.saveAndFlush(structuralElementFrame);
         return openingsInAStructuralElementFrameRepository.saveAndFlush(openingsInAStructuralElementFrame);

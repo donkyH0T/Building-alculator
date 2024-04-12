@@ -19,6 +19,8 @@ public class Structural_element_frame {
     private Integer amount_floor;
     @Column(name = "floor_number",nullable = false)
     private Integer floor_number;
+    @Column(name = "floor_height",nullable = false)
+    private Integer floor_height;
     @Column(name = "perimeter_of_external_walls",nullable = false)
     private Float perimeter_of_external_walls;
     @Column(name = "base_area",nullable = false)

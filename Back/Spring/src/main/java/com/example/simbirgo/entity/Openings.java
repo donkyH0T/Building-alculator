@@ -17,4 +17,6 @@ public class Openings {
     private Float width;
     @Column(name = "height")
     private Float height;
+    @Column(name = "amount")
+    private Integer amount;
 }

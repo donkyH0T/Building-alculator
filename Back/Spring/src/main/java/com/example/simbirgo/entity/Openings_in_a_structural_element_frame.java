@@ -13,8 +13,6 @@ public class Openings_in_a_structural_element_frame {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long id;
-    @Column(name = "amount")
-    private Integer amount;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "structural_element_frame_id")

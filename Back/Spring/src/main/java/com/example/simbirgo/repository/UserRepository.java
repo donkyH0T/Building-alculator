@@ -23,5 +23,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	@Query(value = "SELECT * FROM users LIMIT :count OFFSET :start", nativeQuery = true)
 	List<User> findAllUsers(@Param("start") int start, @Param("count") int count);
 
-
 }

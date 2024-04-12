@@ -14,13 +14,13 @@ public class Results {
     @Column(name = "material",nullable = false)
     private String material;
     @Column(name = "amount")
-    private Integer amount;
+    private Double amount;
     @Column(name = "price")
-    private Float price;
+    private Double price;
     @Column(name = "measurement_unit")
     private String measurement_unit;
     @Column(name = "full_price")
-    private Float full_price;
+    private Double full_price;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "material_characteristics_id")

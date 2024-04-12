@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/api/Account")
+@CrossOrigin(origins = "http://localhost:3000/", maxAge = 3600)
 public class AccountController {
 
     @Autowired
@@ -29,6 +31,7 @@ public class AccountController {
     @GetMapping("/Me")
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN')")
+    @Transactional
     public ResponseEntity<?> me(@RequestHeader("Authorization") String authorizationHeader) {
         String token = extractTokenFromHeader(authorizationHeader);
         if (tokenService.isTokenRevoked(token)) {
@@ -38,13 +41,13 @@ public class AccountController {
     }
 
     @PostMapping("/SignIn")
-    @CrossOrigin
+    @Transactional
     public ResponseEntity<?> signIn(@RequestBody LoginRequest loginRequest) {
         return accountService.signIn(loginRequest);
     }
 
     @PostMapping("/SignUp")
-
+    @Transactional
     public ResponseEntity<?> signUp(@RequestBody SignupRequest signUpRequest) {
         return accountService.signUp(signUpRequest);
     }
@@ -52,6 +55,7 @@ public class AccountController {
     @PostMapping("/SignOut")
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN')")
+    @Transactional
     public ResponseEntity<?> signOut(HttpServletRequest request, HttpServletResponse response, @RequestHeader("Authorization") String authorizationHeader) {
         String token = extractTokenFromHeader(authorizationHeader);
         if (tokenService.isTokenRevoked(token)) {
@@ -63,6 +67,7 @@ public class AccountController {
     @PutMapping("/Update")
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('ADMIN')")
+    @Transactional
     public ResponseEntity<?> update(@RequestBody UpdateRequest updateRequest, @RequestHeader("Authorization") String authorizationHeader) {
         String token = extractTokenFromHeader(authorizationHeader);
         if (tokenService.isTokenRevoked(token)) {

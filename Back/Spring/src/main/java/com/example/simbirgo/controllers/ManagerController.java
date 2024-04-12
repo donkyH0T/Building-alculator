@@ -9,11 +9,12 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/Manager/Customers")
+@CrossOrigin(origins = "http://localhost:3000/", maxAge = 3600)
 public class ManagerController {
 
     @Autowired
@@ -25,10 +26,13 @@ public class ManagerController {
     @Autowired
     CalculationService calculationService;
 
+    @Autowired
+    ComputationService computationService;
 
 
     @PostMapping
     @SecurityRequirement(name = "JWT")
+    @Transactional
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
     public ResponseEntity<?> addCustomers(@RequestBody CustomersRequest customersRequest) {
         return customersService.addCustomers(customersRequest);
@@ -37,6 +41,7 @@ public class ManagerController {
     @PutMapping("/{id}")
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
+    @Transactional
     public ResponseEntity<?> updateCustomers(@PathVariable Long id, @RequestBody CustomersRequest customersDto) {
         return customersService.updateCustomers(id, customersDto);
     }
@@ -44,6 +49,7 @@ public class ManagerController {
     @DeleteMapping("/{id}")
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
+    @Transactional
     public ResponseEntity<?> deleteCustomers(@PathVariable Long id) {
         return customersService.deleteCustomers(id);
     }
@@ -51,14 +57,24 @@ public class ManagerController {
     @GetMapping
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
+    @Transactional
     public ResponseEntity<?> customers() {
         return customersService.getAllCustomers();
     }
 
-    @GetMapping("/calculation")
+    @PostMapping("/calculator")
     @SecurityRequirement(name = "JWT")
     @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
+    @Transactional
     public ResponseEntity<?> calculation(@RequestBody CalculationDto calculationDto) {
         return calculationService.calculation(calculationDto);
+    }
+
+    @GetMapping("/computation")
+    @SecurityRequirement(name = "JWT")
+    @PreAuthorize("hasRole('MANAGER') or hasRole('ADMIN') or hasRole('HEAD') ")
+    @Transactional
+    public ResponseEntity<?> computation(@RequestBody String address) {
+        return computationService.computation(address);
     }
 }
