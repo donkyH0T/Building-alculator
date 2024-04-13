@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; // Импорт useHistory из react-router-dom
 import './css/RegistrationPage.css'; // Подключаем CSS файл 
 
 function RegistrationPage() {
@@ -20,7 +19,6 @@ function RegistrationPage() {
     phone: ''
   });
 
-  const history = useHistory(); // Инициализация useHistory
 
   const handleRegistration = async (event) => {
     event.preventDefault();
@@ -79,7 +77,7 @@ function RegistrationPage() {
       };
     
       try {
-        const response = await fetch('URL', {
+        const response = await fetch('http://localhost:8080/api/Account/SignUp', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

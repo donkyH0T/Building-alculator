@@ -1,7 +1,7 @@
 create sequence hibernate_sequence start 2 increment 1;
 create table calculation (id int8 not null, address_object_constractions varchar(255), created_date timestamp, number int4, manager_id int8, сalculation_state_id int8, primary key (id));
 create table calculation_results (calculation_id int8 not null, results_id int8 not null);
-create table customers (id int8 not null, address varchar(255) not null, email varchar(255) not null, first_name varchar(255) not null, last_name varchar(255) not null, phone int4 not null, second_name varchar(255) not null, primary key (id));
+create table customers (id int8 not null, address varchar(255) not null, email varchar(255) not null, first_name varchar(255) not null, last_name varchar(255) not null, phone varchar(255) not null, second_name varchar(255) not null, primary key (id));
 create table material_characteristics (id int8 not null, length float4, name varchar(255) not null, thickness float4, volume float4, width float4, measurement_unit_id int8, mаterials_id int8, primary key (id));
 create table materials (id int8 not null, material_type varchar(255), name varchar(255) not null, structural_element_type varchar(255), primary key (id));
 create table measurement_units (id int8 not null, measurement_units_name varchar(20) not null, primary key (id));

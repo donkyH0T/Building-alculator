@@ -18,7 +18,7 @@ public class Customers {
     @Column(name = "second_name",nullable = false)
     private String second_name;
     @Column(name = "phone",nullable = false)
-    private Integer phone;
+    private String phone;
     @Column(name = "email",nullable = false)
     private String email;
     @Column(name = "address",nullable = false)

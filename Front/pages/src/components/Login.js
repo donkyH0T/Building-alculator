@@ -17,7 +17,7 @@ function LoginPage() {
   
     try {
       // Отправляем запрос на сервер для аутентификации
-      const response = await fetch('/api/login', {
+      const response = await fetch('http://localhost:8080/api/Account/SignIn', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './css/ClientPage.css'; // Подключаем CSS файл
 import './css/Dva.css';
 
 function ClientPage() {
   const { clientId } = useParams();
+  const { state: clientData } = useLocation();
   const [calculations, setCalculations] = useState([]);
-  const client = { name: 'Тестовый Тест Тестов', address: 'ул.Тестовая ул., дом 43-45', phone: 'тел. 8-900-000-00-00' };
-
+  const client = { 
+                first_name: clientData.first_name, 
+                last_name: clientData.last_name, 
+                second_name: clientData.second_name, 
+                address: clientData.address, 
+                phone: clientData.phone 
+                };
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -18,13 +25,12 @@ function ClientPage() {
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     setIsModalOpen(false);
-    // Определяем, куда переходить в зависимости от выбранной опции
     switch (option) {
       case 'фундамент':
-        window.location.href = '/page3'; // Переходим на страницу для фундамента
+        window.location.href = '/page3';
         break;
       case 'каркас':
-        window.location.href = '/frame-page';
+        window.location.href = '/frame';
         break;
       case 'крыша':
         window.location.href = '/calculation-page';
@@ -59,7 +65,9 @@ function ClientPage() {
   return (
     <div className="container">
       <div className="name">
-        <h1>{client.name}</h1>
+        <h1>{client.first_name}</h1>
+        <h1>{client.last_name}</h1>
+        <h1>{client.second_name}</h1>
         <p>{client.address}</p>
         <p>{client.phone}</p>
       </div>

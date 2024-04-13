@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/Manager/Customers")
-@CrossOrigin(origins = "http://localhost:3000/", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE}, maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600)
 public class ManagerController {
 
     @Autowired

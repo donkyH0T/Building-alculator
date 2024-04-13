@@ -10,7 +10,7 @@ public class CustomersRequest {
     private String last_name;
     private String first_name;
     private String second_name;
-    private Integer phone;
+    private String phone;
     private String email;
     private String address;
 

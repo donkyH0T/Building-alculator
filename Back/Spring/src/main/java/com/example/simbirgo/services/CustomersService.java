@@ -55,7 +55,7 @@ public class CustomersService {
         Customers customers = customersDto.toCustomers();
         customers.setId(customersRepository.findById(id).get().getId());
 //        String message = String.format("Dear customers %s, congratulations on your successful registration", customers.getFirst_name());
-//        mailSenderService.send(customers.getEmail(), "Successful registration", message);
+//        mailSenderService.send(customers.getEmail(), "Successful update", message);
         return ResponseEntity.ok(customersRepository.saveAndFlush(customers));
     }
 
@@ -78,6 +78,9 @@ public class CustomersService {
     }
 
     public ResponseEntity<?> getAllCustomers() {
-        return ResponseEntity.ok(customersRepository.findAll());
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentUserName = authentication.getName();
+        User manager = userRepository.findByLogin(currentUserName).get();
+        return ResponseEntity.ok(manager.getCustomers());
     }
 }
