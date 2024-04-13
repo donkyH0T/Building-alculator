@@ -3,17 +3,18 @@ import './css/FramePage.css';
 
 function FramePage() {
   const [address, setAddress] = useState('');
+  const [description, setDescription] = useState('');
   const [floorFields, setFloorFields] = useState([{ floorNumber: 1, floorHeight: '', outerWallPerimeter: '', baseArea: '', outerWallThickness: '', outerWallCladding: '', paroHydroInsulation: '', windProtection: '', insulation: '', innerWallLength: '', interiorWallThickness: '', osb: '', heightWindow: '', widthWindow: '', sumWindow: '', heightDoorOuter: '', widthDoorOuter: '', sumDoorOuter: '', heightDoorInner: '', widthDoorInner: '', sumDoorInner: '', floorthickness: '' }]);
   const [doorWindows, setDoorWindows] = useState([{ height: '', width: '', count: '' }]);
   const [outerDoors, setOuterDoors] = useState([{ height: '', width: '', count: '' }]);
   const [innerDoors, setInnerDoors] = useState([{ height: '', width: '', count: '' }]);
   const [floorCount, setFloorCount] = useState(1);
 
-  const client = {
+  const [client, setClient] = useState({
     name: 'Тестовый Тест Тестов',
     address: 'ул.Тестовая ул., дом 43-45',
     phone: 'тел. 8-900-000-00-00',
-  };
+  });
 
   const handleDoorWindowChange = (index, name, value) => {
     const updatedDoorWindows = [...doorWindows];
@@ -46,7 +47,39 @@ function FramePage() {
   };
 
   const handleSave = () => {
-    // Ваша функция сохранения
+    const data = {
+      address,
+      description,
+      client,
+      floors: floorFields,
+      doorWindows,
+      outerDoors,
+      innerDoors,
+    };
+  
+    fetch('your-backend-url', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Ошибка при сохранении данных');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Success:', data);
+        alert('Данные успешно сохранены');
+        // Дополнительные действия при успешном сохранении данных
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Ошибка при сохранении данных: ' + error.message);
+        // Дополнительные действия при ошибке сохранении данных
+      });
   };
 
   const handleClear = () => {
