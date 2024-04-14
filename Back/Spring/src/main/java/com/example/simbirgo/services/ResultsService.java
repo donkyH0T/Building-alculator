@@ -1,6 +1,7 @@
 package com.example.simbirgo.services;
 
 import com.example.simbirgo.dto.request.ElementFrameDto;
+import com.example.simbirgo.dto.request.StructuralElementBasementDto;
 import com.example.simbirgo.entity.Material_characteristics;
 import com.example.simbirgo.entity.Results;
 import com.example.simbirgo.repository.Material_characteristicsRepository;
@@ -76,6 +77,18 @@ public class ResultsService {
         result(OSB_Overlap_Area, resultsList, materialCharacteristicsRepository.findById(12L).get());
         result(Vapor_Waterproofing_Area_Overlap, resultsList, materialCharacteristicsRepository.findById(22L).get());
         result(Windbreak_Area_Overlap, resultsList, materialCharacteristicsRepository.findById(26L).get());
+        return resultsList;
+    }
+    public List<Results> getResultsElementBasement(StructuralElementBasementDto elementBasementDto) {
+        elementBasementDto.structuralElementBasement();
+        Integer NumberOfPiles = (int)Math.ceil((elementBasementDto.getPerimeter_of_external_walls()+elementBasementDto.getInternal_wall_length())/2);
+        Double CountOfConcrete = (elementBasementDto.getPerimeter_of_external_walls()+elementBasementDto.getInternal_wall_length())*0.3*0.4*1.15;
+        Integer NumberOfFittings14 = (int)Math.ceil((elementBasementDto.getPerimeter_of_external_walls()+elementBasementDto.getInternal_wall_length())*4/6);
+        Integer NumberOfFittings8 =(int)Math.ceil((elementBasementDto.getPerimeter_of_external_walls()+elementBasementDto.getInternal_wall_length())/0.3*(0.2+0.3)*2/6);
+        Double NumberOfBoard = ((elementBasementDto.getPerimeter_of_external_walls()+elementBasementDto.getInternal_wall_length())*2*(0.4+0.1)*0.03);
+        Double NumberOfBulk = ((elementBasementDto.getPerimeter_of_external_walls()+elementBasementDto.getInternal_wall_length())*2/0.7*0.5*0.05*0.05);
+        List<Results> resultsList = new ArrayList<>();
+        
         return resultsList;
     }
 
