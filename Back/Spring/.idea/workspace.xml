@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0711d8e6-4177-425d-9402-338c32c0fec5" name="Changes" comment="" />
+    <list default="true" id="0711d8e6-4177-425d-9402-338c32c0fec5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/controllers/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/controllers/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/dto/request/CustomersRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/dto/request/CustomersRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/entity/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/entity/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/services/CustomersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/simbirgo/services/CustomersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__init_DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__init_DB.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +160,6 @@
       <workItem from="1712936642026" duration="7767000" />
       <workItem from="1712996155728" duration="1242000" />
       <workItem from="1713000426004" duration="7861000" />
-      <workItem from="1713118707502" duration="2308000" />
     </task>
     <servers />
   </component>

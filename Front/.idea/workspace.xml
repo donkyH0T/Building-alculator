@@ -1,12 +1,373 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0133d081-1016-40e5-bec7-471690ac3d02" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Back/Spring/src/main/java/com/example/simbirgo/services/CalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/Spring/src/main/java/com/example/simbirgo/services/CalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/Spring/src/main/resources/db/migration/V4_init_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/Spring/src/main/resources/db/migration/V4__init_data.sql" afterDir="false" />
+    <list default="true" id="7025db18-c0f6-4612-b1f5-a2f2610ab1d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Development-server-part" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/Grockaem.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/out/production/Grockaem/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/Grockaem/src/Trie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/src/main/java/com/example/demo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/src/main/java/com/example/demo/Demo1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/src/main/java/com/example/demo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo1/src/test/java/com/example/demo/Demo1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/src/main/java/com/example/demo/Demo2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/src/main/java/com/example/demo/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo2/src/test/java/com/example/demo/Demo2ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/src/main/java/com/example/demo22/Demo22Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/src/main/java/com/example/demo22/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java_project/demo22/src/test/java/com/example/demo22/Demo22ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/myapp.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/myapp.log.2023-06-13.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/myapp.log.2023-06-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/MedicalcApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/config/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/dto/BaseCalcDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/dto/ChildPughDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/dto/GraceDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/dto/Info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/dto/ResultDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/dto/SofaDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/restController/InformationRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/restController/ResultChildPughRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/restController/ResultGraceRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/restController/ResultSofaRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/service/MedicalCalculatorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/service/impl/ChildPughService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/service/impl/GraceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/java/com/example/medicalc/service/impl/SofaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/resources/templates/informationCalcul/infoChild-Pugh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/resources/templates/informationCalcul/infoGrace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/resources/templates/informationCalcul/infoSofa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/calc-child-pugh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/calc-grace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/calc-sofa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/img/acs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/img/liver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/img/sofa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/js/calc-child-pugh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/js/calc-grace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/js/calc-sofa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medical-main/src/main/webapp/js/info.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/myapp.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/MedicalcApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/config/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/dto/ChildPughDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/dto/GraceDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/dto/Info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/dto/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/dto/SofaDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/restController/MainRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/service/ChildPughService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/service/GraceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/java/com/example/medicalc/service/SofaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/css/styleGrace.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/css/styleSofa.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/img/acs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/img/liver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/img/sofa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/js/scriptChild-Pugh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/js/scriptGrace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/js/scriptInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/static/js/scriptSofa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/Child-Pugh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/calculator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/content/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/content/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/grace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/main/resources/templates/sofa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../medicalc/src/test/java/com/example/medicalc/MedicalcApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/java/com/example/securityrestapi/SecurityRestApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/java/com/example/securityrestapi/model/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/java/com/example/securityrestapi/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/java/com/example/securityrestapi/model/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/java/com/example/securityrestapi/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/resources/liquibase/db.changelog-1.0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/main/resources/liquibase/db.changelog.master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../securityRestApi/src/test/java/com/example/securityrestapi/SecurityRestApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../shablon-konverta381.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/HTML_5. Лаб.раб.с 1 по 5 .docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab12_JavaScript.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_6.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_9.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_1/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_1/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_1/Отчёт HTML4 №1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_10/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_10/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_10/Отчёт HTML4 №10.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_11/1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_11/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_11/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_11/Отчёт HTML4 №11.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Задание1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Отчёт HTML4 №12.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/Пример1_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/инд 1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/инд 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_12/инд 3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_2/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_2/Отчёт HTML4 №2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_3/Index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_3/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_3/Отчёт HTML4 №3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_4/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_4/index4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_4/Отчёт HTML4 №4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/avatar-default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_5/Отчёт HTML4 №5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_6/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_6/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_6/Отчёт HTML4 №6.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_7/2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_7/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_7/Отчёт HTML4 №7.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_8/author/author.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_8/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_8/termin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_8/Отчёт HTML4 №8.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_9/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML4/Lab_9/Отчёт HTML4 №9.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-1/Отчёт HTML5 №1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/I'm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/information.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-2/Отчёт HTML5 №2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-3/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-3/Отчёт HTML5 №3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/I'm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/SHAMAN.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/frendzona-askorbinka.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/milk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-4/Отчёт HTML5 №4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-5/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/lb-5/Отчёт HTML5 №5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/Отчёт HTML5 №1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/Отчёт HTML5 №2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/Отчёт HTML5 №3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/Отчёт HTML5 №4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Lab_HTML5/Отчёт HTML5 №5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/lab-rab-10-css1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/lab-rab-11-css2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №10.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №11.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №12.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №6.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №7.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №8.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML4/Отчёт HTML4 №9.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML5/Отчёт HTML5 №1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML5/Отчёт HTML5 №2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML5/Отчёт HTML5 №3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML5/Отчёт HTML5 №4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка клиентской/Отчёты HTML Куренков/HTML5/Отчёт HTML5 №5.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/Lr3Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/component/JwtAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/component/JwtUserIdTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/component/PasswordEncoderImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/component/SuccessLogoutHandlerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/controller/AuthRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/controller/MeRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/controller/UserRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/dao/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/dao/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/dto/AuthDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/dto/RegDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/dto/UpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/dto/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/filter/JwtRequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/security/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/LogoutService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/TokenParserFromRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/UserAuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/UserMeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/UserRegService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/service/impl/UserCrudService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/java/com/example/lr_3/webconfig/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/resources/db/migration/V1__.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/resources/db/migration/V2__create_animals_form.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/main/resources/db/migration/V5_add_token.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_3/src/test/java/com/example/lr_3/Lr3ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/Lr3Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/component/JwtAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/component/JwtUserIdTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/component/PasswordEncoderImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/component/SuccessLogoutHandlerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/controller/AuthRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/controller/MeRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/controller/UserRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dao/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dao/TokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dao/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dao/VerificationTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dto/AuthDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dto/RegDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dto/UpdateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/dto/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/entity/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/entity/VerificationToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/event/OnAuthorizationEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/event/OnRegistrationEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/filter/ConfirmFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/filter/JwtRequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/filter/UserVerificationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/listener/AuthorizationListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/listener/RegistrationWithMailListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/security/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/JwtTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/LogoutService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/TokenParserFromRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/UserAuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/UserMeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/UserRegService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/VerificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/VerificationTokenCrudService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/impl/IVerificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/service/impl/UserCrudService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/token/JwtTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/webconfig/MailConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/java/com/example/lr_3/webconfig/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/db/migration/V1__.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/db/migration/V2__create_animals_form.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/db/migration/V3__add_auth_columns.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/db/migration/V4__add_enabled.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/db/migration/V5__add_token.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/db/migration/V6__verification_tokens.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/main/resources/mail.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/LR_4/src/test/java/com/example/lr_3/Lr3ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/src/main/java/com/example/nosql/NoSQlApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Разработка серверной части web-приложений/NoSQl/src/test/java/com/example/nosql/NoSQlApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../сети/InstrRiverbed.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../сети/PIMS_lab_praktikum.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../сети/lab8.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../сети/lab9.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../сети/seti.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,15 +375,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
+  "associatedIndex": 4
 }]]></component>
-  <component name="ProjectId" id="2esAr5ECwzaRhXNuCB3FU7vIxrQ" />
+  <component name="ProjectId" id="2f2WpHkm4LUtEdRa2r396ZAvpgt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,16 +395,19 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/donkyhot/Desktop/4 curse/front/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/pages/package.json" />
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
@@ -52,21 +416,16 @@
       <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.start" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0133d081-1016-40e5-bec7-471690ac3d02" name="Changes" comment="" />
-      <created>1712683110777</created>
+      <changelist id="7025db18-c0f6-4612-b1f5-a2f2610ab1d6" name="Changes" comment="" />
+      <created>1712999833255</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712683110777</updated>
-      <workItem from="1712683116526" duration="934000" />
+      <updated>1712999833255</updated>
+      <workItem from="1712999834476" duration="510000" />
     </task>
     <servers />
   </component>
